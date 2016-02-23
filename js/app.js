@@ -10,4 +10,8 @@ app.config(function($routeProvider) {
         templateUrl: 'partials/hello.html',
         controller: 'HelloController'
       })
+      .when('/add/:num1/:num2', {
+        templateUrl: 'partials/addition.html',
+        controller: 'addController'
+      })
 });
