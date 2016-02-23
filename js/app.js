@@ -14,4 +14,8 @@ app.config(function($routeProvider) {
         templateUrl: 'partials/addition.html',
         controller: 'addController'
       })
+      .when('/div/:num1/:num2', {
+        templateUrl: 'partials/division.html',
+        controller: 'divController'
+      })
 });
