@@ -4,9 +4,18 @@
     <meta charset="utf-8">
     <title>Movie search</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css" charset="utf-8">
   </head>
   <body ng-controller='mainController'>
-    <h1>{{where}}</h1>
+    <div class='container'>
+      <div>
+        <h1>Angular OMDB API Search</h1>
+        <h3>Enter a movie by title</h3>
+        <input type="text" placeholder="Enter a movie title">
+        <button type="button" class="btn btn-success">Search</button>
+      </div>
+      <hr>
+    </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
