@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body ng-controller='MainController'>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="/#/">Home</a></li>
+      <li role="presentation"><a href="/#/hello">Hello</a></li>
+      <li role="presentation"><a href="/#/goodbye">Goodbye</a></li>
+    </ul>
+    <div ng-view></div>
+    {{whereAmI}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
+    <script type='text/javascript' src='js/app.js'></script>
+    <script type='text/javascript' src='js/controllers/main_controller.js'></script>
+    <script type='text/javascript' src='js/controllers/hello_controller.js'></script>
+    <script type='text/javascript' src='js/controllers/goodbye_controller.js'></script>
+  </body>
+</html>
