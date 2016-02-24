@@ -1,9 +1,15 @@
 app.controller('mainController', ['$scope', '$http', function($scope, $http){
 
   $scope.search = function() {
-    $http.get('http://omdbapi.com/?s='+$scope.input+'&r=json').then(function(data){
-      $scope.movies = data.data;
-      console.log($scope.movies);
+    $scope.titles = [];
+    $http.get('http://omdbapi.com/?s='+$scope.input).then(function(data){
+      $scope.movies = data.data.Search;
+        for (var i =0; i< $scope.movies.length; i++){
+          var title = $scope.movies[i]['Title'];
+          $scope.titles.push(title)
+        }
+        console.log($scope.titles);
     });
+
   }
 }])
