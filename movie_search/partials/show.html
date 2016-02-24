@@ -1,3 +1,33 @@
-<div ng-repeat='movie in movie'>
-  <p>{{movie.Title}}</p>
-</div
+<h1 class='showTitle'>{{movie.Title}}</h1>
+<div class='col-md-4'>
+  <img class='showImg' src="{{movie.Poster}}" alt="No good">
+</div>
+<div class='col-md-8'>
+  <h3>Starring: <span class='actors'>{{movie.Actors}}<span></h3>
+  <h3 class='actors'>{{movie.Plot}}</h3>
+  <h3>Additional Details:</h3>
+  <h3>Awards</h3>
+  <h4>{{movie.Awards}}</h4>
+  <h3>Country</h3>
+  <h4>{{movie.Country}}</h4>
+  <h3>Director</h3>
+  <h4>{{movie.Director}}</h4>
+  <h3>Genre</h3>
+  <h4>{{movie.Genre}}</h>
+  <h3>Language</h3>
+  <h4>{{movie.Language}}</h4>
+  <h3>Metascore</h3>
+  <h4>{{movie.Metascore}}</h4>
+  <h3>Rated</h3>
+  <h4>{{movie.Rated}}</h4>
+  <h3>Runtime</h3>
+  <h4>{{movie.Runtime}}</h4>
+  <h3>Title</h3>
+  <h4>{{movie.Title}}</h4>
+  <h3>Year</h3>
+  <h4>{{movie.Year}}</h4>
+  <h3>Imdb Rating</h3>
+  <h4>{{movie.imdbRating}}</h4>
+  <h3>Type</h3>
+  <h4>{{movie.Type}}</h4>
+</div>

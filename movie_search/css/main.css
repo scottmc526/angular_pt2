@@ -8,9 +8,34 @@ button {
   margin: 1%;
 }
 
+.showTitle {
+  margin-left: 2%;
+  font-family: 'Comfortaa', curive;
+}
 
 
 img {
   height: 80px;
   width: 80px;
+}
+
+.showImg {
+  height: 100%;
+  width: 100%;
+}
+
+.actors {
+  font-weight: lighter;
+  color: grey
+  font-family: 'Comfortaa', cursive;
+}
+
+h3 {
+  font-weight: bolder;
+  font-family: 'Comfortaa', cursive;
+}
+.col-md-8 h4 {
+  font-weight: lighter;
+  color: grey
+  font-family: 'Comfortaa', cursive;
 }

@@ -4,7 +4,7 @@ app.config(function($routeProvider) {
   $routeProvider
     .when('/:input', {
       templateUrl: 'partials/index.html',
-      controller: 'allMovies'
+      controller: 'mainController'
     })
     .when('/:imdbID/show', {
     templateUrl: 'partials/show.html',
