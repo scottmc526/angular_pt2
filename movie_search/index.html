@@ -12,29 +12,22 @@
         <h1>Angular OMDB API Search</h1>
         <h3>Enter a movie by title</h3>
         <input type="text" ng-model='input' placeholder="Enter a movie title">
-        <button type="button" ng-click='search()'class="btn btn-success">Search</button>
+        <a href='/#/{{input}}' ng-click='search()'><button  type="button" class="btn btn-success">Search</button></a>
       </div>
       <hr>
     </div>
-    <div ng-view></div>
-    <div class='container' ng-repeat='movie in movies'>
-      <div class='row'>
-        <h4><a ng-click='removeMovies()' href='/#/{{movie.imdbID}}/show'>{{movie.Title}}</a></h4>
-        <img src="{{movie.Poster}}" alt="No Image available">
-        <p>Year: {{ movie.Year}}</p>
-        <p>Test</p>
-      </div>
-      <hr>
+    <div ng-view>
     </div>
+
 
 
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
-  <script src='https://code.jquery.com/jquery-2.2.1.min.js'></script>
   <script type="text/javascript" src='js/app.js'></script>
   <script type="text/javascript" src='js/controllers/main_controller.js'></script>
   <script type="text/javascript" src='js/controllers/movie_controller.js'></script>
+  <script type="text/javascript" src='js/controllers/allMovies.js'></script>
   </body>
 </html>
