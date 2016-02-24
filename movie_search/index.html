@@ -16,13 +16,13 @@
       </div>
       <hr>
     </div>
-    <div ng-repeat='movie in movies'>
-      <h4>{{movie.Title}}</h4>
-      <img src="{{movie.Poster}}" alt="No Image available">
-      <p>Year: {{ movie.Year}}</p>
+    <div class='container' ng-repeat='movie in movies'>
+      <div class='row'>
+        <h4>{{movie.Title}}</h4>
+        <img src="{{movie.Poster}}" alt="No Image available">
+        <p>Year: {{ movie.Year}}</p>
+      </div>
       <hr>
-
-
     </div>
 
 
