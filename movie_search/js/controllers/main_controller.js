@@ -5,6 +5,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http){
     $http.get('http://omdbapi.com/?s='+$scope.input).then(function(data){
       console.log($scope.movies = data.data.Search);
     });
-
+  }
+  $scope.removeMovies = function() {
+    return $('.row, hr').detach()
   }
 }])
