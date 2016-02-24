@@ -19,7 +19,7 @@
     <div ng-view></div>
     <div class='container' ng-repeat='movie in movies'>
       <div class='row'>
-        <h4><a href='/#/show'>{{movie.Title}}</a></h4>
+        <h4><a href='/#/{{movie.imdbID}}/show'>{{movie.Title}}</a></h4>
         <img src="{{movie.Poster}}" alt="No Image available">
         <p>Year: {{ movie.Year}}</p>
       </div>
