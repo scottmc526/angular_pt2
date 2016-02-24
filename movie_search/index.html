@@ -11,8 +11,8 @@
       <div>
         <h1>Angular OMDB API Search</h1>
         <h3>Enter a movie by title</h3>
-        <input type="text" placeholder="Enter a movie title">
-        <button type="button" class="btn btn-success">Search</button>
+        <input type="text" ng-model='input' placeholder="Enter a movie title">
+        <button type="button" ng-click='search()'class="btn btn-success">Search</button>
       </div>
       <hr>
     </div>
