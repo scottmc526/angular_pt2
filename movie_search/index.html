@@ -16,9 +16,10 @@
       </div>
       <hr>
     </div>
+    <div ng-view></div>
     <div class='container' ng-repeat='movie in movies'>
       <div class='row'>
-        <h4>{{movie.Title}}</h4>
+        <h4><a href='/#/show'>{{movie.Title}}</a></h4>
         <img src="{{movie.Poster}}" alt="No Image available">
         <p>Year: {{ movie.Year}}</p>
       </div>
@@ -32,5 +33,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script>
   <script type="text/javascript" src='js/app.js'></script>
   <script type="text/javascript" src='js/controllers/main_controller.js'></script>
+  <script type="text/javascript" src='js/controllers/movie_controller.js'></script>
   </body>
 </html>
