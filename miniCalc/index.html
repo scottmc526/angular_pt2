@@ -5,10 +5,9 @@
     <title>Calc</title>
   </head>
   <body ng-controller='mainController'>
-    {{sayHi}}
     <h1>DO MATH RIGHT NOW</h1>
     <label>Select math function</label>
-    <select class="" name="">
+    <select id='operation'>
       <option value="1">Add</option>
       <option value="2">Subtract</option>
       <option value="3">Multiply</option>
@@ -16,10 +15,11 @@
       <option value="5">Power</option>
     </select>
     <label>First Number</label>
-    <input type="text">
+    <input type="text" ng-model='num1'>
     <label>Second Number</label>
-    <input type="text">
-
+    <input type="text" ng-model='num2'>
+    <button type="submit" ng-click='math()'>Math it</button>
+    {{total | number}}
 
     <!-- angular cdns -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
