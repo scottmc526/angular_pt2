@@ -40,7 +40,7 @@
             <option value="spring">spring</option>
           </select>
           <label>Search By Name:</label>
-          <input type="text" ng-model='finder.name'>
+          <input type="text" ng-model='findName.name'>
         </div>
         <div class='pull-right'>
           <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag:</a>
@@ -54,15 +54,15 @@
         <th>Information
           <span class='pull-right'>
             <label>Sort by Price:</label>
-            <select>
+            <select ng-model='price'>
               <option value=""></option>
-              <option value="1">Lowest</option>
-              <option value="2">Highest</option>
+              <option value="price">Lowest</option>
+              <option value="-price">Highest</option>
             </select>
           </span>
         </th>
       </thead>
-      <tbody ng-repeat='tea in teas | filter: finder | filter:category'>
+      <tbody ng-repeat='tea in teas | filter: findName | filter:category | orderBy:price'>
       <tr>
         <td><img src="{{tea.imageUrl}}" alt="No image"></td>
         <td>
