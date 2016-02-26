@@ -27,7 +27,17 @@
         <div class='pull-left search'>
           <label>Search By Category:</label>
           <select>
-
+            <option value=""></option>
+            <option value="1">dark</option>
+            <option value="2">cold</option>
+            <option value="3">awesome</option>
+            <option value="4">dry</option>
+            <option value="5">hot</option>
+            <option value="6">summer</option>
+            <option value="7">lucid</option>
+            <option value="8">warm</option>
+            <option value="9">winter</option>
+            <option value="10">spring</option>
           </select>
           <label>Search By Name:</label>
           <input type="text">
@@ -45,14 +55,45 @@
           <span class='pull-right'>
             <label>Sort by Price:</label>
             <select>
-
+              <option value=""></option>
+              <option value="1">Lowest</option>
+              <option value="2">Highest</option>
             </select>
           </span>
         </th>
       </thead>
-      <tbody>
-        <td>hi</td>
-        <td>ho</td>
+      <tbody ng-repeat='tea in teas'>
+      <tr>
+        <td><img src="{{tea.imageUrl}}" alt="No image"></td>
+        <td>
+          <h1>{{tea.name}}
+            <span class='pull-right'>Quantity:
+              <select>
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <a href="#" class="btn btn-warning">Add To Bag</a>
+            </span>
+          </h1>
+          <p><strong>Price: </strong>{{tea.price / 100| currency}}</p>
+          <p><strong>Ingredients: </strong> {{tea.ingredients}}</p>
+          <p><strong>Rating: </strong>{{tea.rating}}</p>
+          <p><strong>In stock: </strong>{{tea.inStock ? 'Yes' : 'No'}}</p>
+          <p class='pull-right'><strong>Caffeine Scale: </strong>{{tea.caffeineScale}}</p>
+          <label><strong>Categories:</strong></label>
+          <ul>
+            <li>{{tea.categories[0]}}</li>
+            <li ng-show='{{tea.categories[1] ? true : false}}'>{{tea.categories[1]}}</li>
+            <li ng-show='{{tea.categories[2] ? true : false}}'>{{tea.categories[2]}}</li>
+          </ul>
+
+        </td>
+      </tr>
       </tbody>
     </table>
 
