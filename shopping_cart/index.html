@@ -40,7 +40,7 @@
             <option value="10">spring</option>
           </select>
           <label>Search By Name:</label>
-          <input type="text">
+          <input type="text" ng-model='finder.name'>
         </div>
         <div class='pull-right'>
           <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag:</a>
@@ -62,7 +62,7 @@
           </span>
         </th>
       </thead>
-      <tbody ng-repeat='tea in teas'>
+      <tbody ng-repeat='tea in teas | filter: finder'>
       <tr>
         <td><img src="{{tea.imageUrl}}" alt="No image"></td>
         <td>
