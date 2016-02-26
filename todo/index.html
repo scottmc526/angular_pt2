@@ -8,9 +8,13 @@
   </head>
   <body ng-controller='mainController'>
     <h1>Add new To Do</h1>
-    <input type="text" class='form-control'>
-    <button type="submit" class="btn btn-success">Submit <span class="glyphicon glyphicon-book"></span></button>
-    {{hello}}
+    <input type="text" class='form-control' ng-model='item'>
+    <button ng-click='list()' type="submit" class="btn btn-success">Submit <span class="glyphicon glyphicon-book"></span></button>
+    <div ng-repeat='item in stuff'>
+      <ul>
+        <li>{{item.items}}</li>
+      </ul>
+    </div>
 
 
 
