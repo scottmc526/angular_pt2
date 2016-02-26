@@ -26,18 +26,18 @@
       <div class='row'>
         <div class='pull-left search'>
           <label>Search By Category:</label>
-          <select>
+          <select ng-model='category'>
             <option value=""></option>
-            <option value="1">dark</option>
-            <option value="2">cold</option>
-            <option value="3">awesome</option>
-            <option value="4">dry</option>
-            <option value="5">hot</option>
-            <option value="6">summer</option>
-            <option value="7">lucid</option>
-            <option value="8">warm</option>
-            <option value="9">winter</option>
-            <option value="10">spring</option>
+            <option value="dark">dark</option>
+            <option value="cold">cold</option>
+            <option value="awesome">awesome</option>
+            <option value="dry">dry</option>
+            <option value="hot">hot</option>
+            <option value="summer">summer</option>
+            <option value="lucid">lucid</option>
+            <option value="warm">warm</option>
+            <option value="winter">winter</option>
+            <option value="spring">spring</option>
           </select>
           <label>Search By Name:</label>
           <input type="text" ng-model='finder.name'>
@@ -62,7 +62,7 @@
           </span>
         </th>
       </thead>
-      <tbody ng-repeat='tea in teas | filter: finder'>
+      <tbody ng-repeat='tea in teas | filter: finder | filter:category'>
       <tr>
         <td><img src="{{tea.imageUrl}}" alt="No image"></td>
         <td>
