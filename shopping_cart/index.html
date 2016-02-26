@@ -7,7 +7,54 @@
     <link rel="stylesheet" href="css/main.css" charset="utf-8">
   </head>
   <body ng-controller='mainController'>
-    <button ng-click='teas()'></button>
+    <div class='top'>
+      <p>Guaranteed Awesome!</p>
+    </div>
+    <h1 class='title'><em>Welcome to MEAN Tea!</em></h1>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home </a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='container'>
+      <div class='row'>
+        <div class='pull-left search'>
+          <label>Search By Category:</label>
+          <select>
+
+          </select>
+          <label>Search By Name:</label>
+          <input type="text">
+        </div>
+        <div class='pull-right'>
+          <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag:</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <table class="table table-bordered">
+      <thead>
+        <th>Tea</th>
+        <th>Information
+          <span class='pull-right'>
+            <label>Sort by Price:</label>
+            <select>
+
+            </select>
+          </span>
+        </th>
+      </thead>
+      <tbody>
+        <td>hi</td>
+        <td>ho</td>
+      </tbody>
+    </table>
 
 
 
@@ -19,6 +66,5 @@
     <script type="text/javascript" src='js/app.js'></script>
     <script type="text/javascript" src='js/services.js'></script>
     <script type="text/javascript" src='js/controllers/main_controller.js'></script>
-    <!-- <script type="json" src='tea_list.json'></script> -->
   </body>
 </html>
