@@ -5,6 +5,39 @@
   <div class='pull-right'>
     <h3>Order total:</h3>
   </div>
-  {{hello}}
 </div>
-<!-- <div ng-repeat=''></div> -->
+<table class="table table-bordered">
+  <thead>
+    <th>Product</th>
+    <th>Quantity</th>
+    <th>Subtotal</th>
+  </thead>
+  <tbody ng-repeat='item in cart'>
+    <td>
+      <h1>{{item.name}}</h1>
+      <img ng-src="{{item.imageUrl}}" alt="No image available">
+      <p><strong>Caffeine Scale: </strong> {{item.caffeineScale}}</p>
+      <p><strong>Ingredients: </strong> {{item.ingredients}}</p>
+      <p><strong>Rating: </strong>{{item.rating}}</p>
+    </td>
+    <td>
+      {{item.qty}}
+    </td>
+    <td>
+      {{item.price}}
+    </td>
+    <td>
+      <button class="btn btn-warning">Edit</button>
+      <button class="btn btn-danger">Remove</button>
+    </td>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<!-- <div ng-repeat='item in cart'>
+</div> -->
