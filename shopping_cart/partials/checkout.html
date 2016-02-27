@@ -24,7 +24,7 @@
       {{item.qty}}
     </td>
     <td>
-      {{item.price / 100 | currency}}
+      {{item.price / 100 * item.qty | currency}}
     </td>
     <td>
       <button class="btn btn-warning">Edit</button>
