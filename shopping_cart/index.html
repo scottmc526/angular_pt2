@@ -68,16 +68,16 @@
         <td>
           <h1>{{tea.name}}
             <span class='pull-right'>Quantity:
-              <select>
+              <select id='qty' ng-model='qty'>
                 <option value=""></option>
-                <option value="1">1</option>
+                <option value='1'>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
               </select>
-              <a href="#" class="btn btn-warning" ng-click='add(tea)'>Add To Bag</a>
+              <a href="#" class="btn btn-warning" ng-click='add(tea,qty)'>Add To Bag</a>
             </span>
           </h1>
           <p><strong>Price: </strong>{{tea.price / 100| currency}}</p>
