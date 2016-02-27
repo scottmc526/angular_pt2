@@ -1,0 +1,74 @@
+<div class='container'>
+  <div class='row'>
+    <div class='pull-left search'>
+      <label>Search By Category:</label>
+      <select ng-model='category'>
+        <option value=""></option>
+        <option value="dark">dark</option>
+        <option value="cold">cold</option>
+        <option value="awesome">awesome</option>
+        <option value="dry">dry</option>
+        <option value="hot">hot</option>
+        <option value="summer">summer</option>
+        <option value="lucid">lucid</option>
+        <option value="warm">warm</option>
+        <option value="winter">winter</option>
+        <option value="spring">spring</option>
+      </select>
+      <label>Search By Name:</label>
+      <input type="text" ng-model='findName.name'>
+    </div>
+    <div class='pull-right'>
+      <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag: {{bagValue === 0 ? emptyBag : '('+bagValue+')' }}</a>
+    </div>
+  </div>
+</div>
+<br>
+<table class="table table-bordered">
+  <thead>
+    <th>Tea</th>
+    <th>Information
+      <span class='pull-right'>
+        <label>Sort by Price:</label>
+        <select ng-model='price'>
+          <option value=""></option>
+          <option value="price">Lowest</option>
+          <option value="-price">Highest</option>
+        </select>
+      </span>
+    </th>
+  </thead>
+  <tbody ng-repeat='tea in teas | filter: findName | filter:category | orderBy:price'>
+  <tr>
+    <td><img ng-src="{{tea.imageUrl}}" alt="No image"></td>
+    <td>
+      <h1>{{tea.name}}
+        <span class='pull-right'>Quantity:
+          <select id='qty' ng-model='qty'>
+            <option value=""></option>
+            <option value='1'>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <button class="btn btn-warning" ng-click='add(tea,qty)'>Add To Bag</button>
+        </span>
+      </h1>
+      <p><strong>Price: </strong>{{tea.price / 100| currency}}</p>
+      <p><strong>Ingredients: </strong> {{tea.ingredients}}</p>
+      <p><strong>Rating: </strong>{{tea.rating}}</p>
+      <p><strong>In stock: </strong>{{tea.inStock ? 'Yes' : 'No'}}</p>
+      <p class='pull-right'><strong>Caffeine Scale: </strong>{{tea.caffeineScale}}</p>
+      <label><strong>Categories:</strong></label>
+      <ul>
+        <li>{{tea.categories[0]}}</li>
+        <li ng-show='{{tea.categories[1] ? true : false}}'>{{tea.categories[1]}}</li>
+        <li ng-show='{{tea.categories[2] ? true : false}}'>{{tea.categories[2]}}</li>
+      </ul>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
