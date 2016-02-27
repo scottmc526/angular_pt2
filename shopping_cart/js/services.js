@@ -5,7 +5,8 @@ app.service('teaGetter', ['$http', function($http){
       return $http.get('/tea_list.json')
     },
     addCart: function(input,qty) {
-      document.getElementById('qty').value === '' ? input.qty = 1 : input.qty = Number(document.getElementById('qty').value);
+      qty == undefined ? input.qty = 1 : input.qty = Number(qty)
+      // input.qty = qty
       this.cart.push(input)
       console.log(this.cart);
     }

@@ -6,8 +6,8 @@ app.controller('mainController', ['teaGetter', '$scope', '$http', function(teaGe
   teaGetter.getTea().then(function(data){
     $scope.teas = data.data
   })
-  $scope.add = function(input) {
-    teaGetter.addCart(input)
+  $scope.add = function(input,qty) {
+    teaGetter.addCart(input,qty)
     $scope.bagValue++
   }
 }])
