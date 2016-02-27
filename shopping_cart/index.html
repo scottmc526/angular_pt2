@@ -43,7 +43,7 @@
           <input type="text" ng-model='findName.name'>
         </div>
         <div class='pull-right'>
-          <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag:</a>
+          <a href="#" class="btn btn-danger"><strong>Checkout</strong> | Bag: {{bagValue}}</a>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
       </thead>
       <tbody ng-repeat='tea in teas | filter: findName | filter:category | orderBy:price'>
       <tr>
-        <td><img src="{{tea.imageUrl}}" alt="No image"></td>
+        <td><img ng-src="{{tea.imageUrl}}" alt="No image"></td>
         <td>
           <h1>{{tea.name}}
             <span class='pull-right'>Quantity:
@@ -77,7 +77,7 @@
                 <option value="5">5</option>
                 <option value="6">6</option>
               </select>
-              <a href="#" class="btn btn-warning">Add To Bag</a>
+              <a href="#" class="btn btn-warning" ng-click='add(tea)'>Add To Bag</a>
             </span>
           </h1>
           <p><strong>Price: </strong>{{tea.price / 100| currency}}</p>
