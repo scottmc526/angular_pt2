@@ -9,7 +9,6 @@ app.controller('mainController', ['teaGetter', '$scope', '$http', function(teaGe
   $scope.add = function(input) {
     teaGetter.addCart(input)
     $scope.bagValue++
-    console.log($scope.cart);
   }
 }])
 
