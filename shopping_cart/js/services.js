@@ -8,12 +8,6 @@ app.service('teaGetter', ['$http', function($http){
     addCart: function(input,qty) {
       qty == undefined ? input.qty = 1 : input.qty = Number(qty)
       this.cart.push(input)
-
-    },
-    totalz: function(){
-      for (var i = 0; i < this.cart.length; i++) {
-        return this.total += this.cart[i]['price'] * this.cart[i]['qty']
-      }
     }
   }
 }])
