@@ -1,7 +1,7 @@
 app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(teaGetter, $scope, $http){
   $scope.cart = teaGetter.cart
   $scope.grandTotal = 0;
-  $scope.show = false;
+  $scope.editBox = false;
 
   for (var i = 0; i < $scope.cart.length; i++) {
     $scope.grandTotal += $scope.cart[i]['price'] * $scope.cart[i]['qty']
@@ -12,7 +12,10 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
     teaGetter.deleteCart(input)
     $scope.grandTotal -= price
   }
-  $scoppe.edit =  function(){
+  $scope.edit =  function(){
     $scope.show = true;
+  }
+  $scope.toggle = function() {
+    $scope.editBox = !$scope.editBox
   }
 }])
