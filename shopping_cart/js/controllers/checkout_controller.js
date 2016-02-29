@@ -12,4 +12,7 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
     teaGetter.deleteCart(input)
     $scope.grandTotal -= price
   }
+  $scoppe.edit =  function(){
+    $scope.show = true;
+  }
 }])

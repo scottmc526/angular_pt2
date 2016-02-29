@@ -38,7 +38,7 @@
       </span>
     </th>
   </thead>
-  <tbody ng-repeat='tea in teas | filter: findName | filter:category | orderBy:price'>
+  <tbody ng-repeat='tea in teas |filter: {categories:category, name:findName} | orderBy:price'>
   <tr>
     <td><img ng-src="{{tea.imageUrl}}" alt="No image"></td>
     <td>
