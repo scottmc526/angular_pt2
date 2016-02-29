@@ -7,9 +7,5 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
   }
 
   $scope.delete = teaGetter.deleteCart
-  // $scope.showEdit = function(){
-  //   $scope.show = true;
-  // }
-  // $scope.edit = function(qty){
-  // }
+
 }])
