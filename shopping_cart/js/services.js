@@ -11,6 +11,10 @@ app.service('teaGetter', ['$http', function($http){
     },
     deleteCart: function(input){
       this.cart.splice(input,1)
+    },
+    editCart : function(input, qty) {
+      console.log(qty);
+      this.cart[input]['qty'] = qty;
     }
   }
 }])

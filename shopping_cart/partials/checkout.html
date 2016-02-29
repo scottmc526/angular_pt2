@@ -21,8 +21,13 @@
       <p><strong>Rating: </strong>{{item.rating}}</p>
     </td>
     <td>
-      <select ng-show='editBox'>
+      <select ng-model='qty' ng-show='editBox'>
         <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
       </select>
       {{item.qty}}
     </td>
@@ -31,6 +36,7 @@
     </td>
     <td>
       <button ng-click='toggle()' class="btn btn-warning">Edit</button>
+      <button ng-click='edit($index, qty)' ng-show='editBox'>Submit Changes</button>
       <button ng-click='delete($index, price)'class="btn btn-danger">Remove</button>
     </td>
   </tbody>
