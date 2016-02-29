@@ -6,7 +6,11 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
     $scope.grandTotal += $scope.cart[i]['price'] * $scope.cart[i]['qty']
   }
 
-  $scope.delete = teaGetter.deleteCart
+  $scope.delete = function(input, price){
+    price = $scope.cart[input]['price']
+    teaGetter.deleteCart(input)
+    $scope.grandTotal -= price
+  }
   // $scope.showEdit = function(){
   //   $scope.show = true;
   // }
