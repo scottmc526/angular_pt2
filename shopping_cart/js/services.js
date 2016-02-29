@@ -13,8 +13,14 @@ app.service('teaGetter', ['$http', function($http){
       this.cart.splice(input,1)
     },
     editCart : function(input, qty) {
-      console.log(qty);
       this.cart[input]['qty'] = qty;
+    },
+    cartTotal : function(){
+      var total = 0;
+      this.cart.forEach(function(item){
+        total += item.qty * item.price;
+      })
+      return total;
     }
   }
 }])

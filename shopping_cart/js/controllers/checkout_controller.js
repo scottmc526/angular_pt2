@@ -14,7 +14,8 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
   }
   $scope.edit = function(input, qty) {
     teaGetter.editCart(input, qty)
-    $scope.grandTotal = $scope.cart[input]['price'] * $scope.cart[input]['qty']
+    $scope.grandTotal = teaGetter.cartTotal();
+    $scope.toggle()
   }
 
   $scope.toggle = function() {
