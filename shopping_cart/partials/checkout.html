@@ -21,6 +21,9 @@
       <p><strong>Rating: </strong>{{item.rating}}</p>
     </td>
     <td>
+      <select ng-click='showEdit()' ng-show='{{show ? true:false}}'class='ng-hide'>
+        <option value="1">1</option>
+      </select>
       {{item.qty}}
     </td>
     <td>
@@ -28,7 +31,7 @@
     </td>
     <td>
       <button class="btn btn-warning">Edit</button>
-      <button ng-click='delete(input)'class="btn btn-danger">Remove</button>
+      <button ng-click='delete($index)'class="btn btn-danger">Remove</button>
     </td>
   </tbody>
 </table>

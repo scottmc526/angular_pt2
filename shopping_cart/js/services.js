@@ -8,6 +8,9 @@ app.service('teaGetter', ['$http', function($http){
     addCart: function(input,qty) {
       qty == undefined ? input.qty = 1 : input.qty = Number(qty)
       this.cart.push(input)
+    },
+    deleteCart: function(input){
+      this.cart.splice(input,1)
     }
   }
 }])
