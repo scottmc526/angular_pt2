@@ -4,4 +4,8 @@ app.controller('checkoutController', ['teaGetter', '$scope', '$http', function(t
   for (var i = 0; i < $scope.cart.length; i++) {
     $scope.grandTotal += $scope.cart[i]['price'] * $scope.cart[i]['qty']
   }
+
+  $scope.delete = function(input){
+    $scope.cart.pop(input)
+  }
 }])
