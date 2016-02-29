@@ -13,7 +13,7 @@ app.service('teaGetter', ['$http', function($http){
       this.cart.splice(input,1)
     },
     editCart : function(input, qty) {
-      this.cart[input]['qty'] = qty;
+      qty == undefined ? this.cart[input]['qty'] = 1 : this.cart[input]['qty'] = qty;
     },
     cartTotal : function(){
       var total = 0;
