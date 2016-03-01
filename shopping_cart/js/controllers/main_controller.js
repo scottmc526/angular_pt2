@@ -10,12 +10,3 @@ app.controller('mainController', ['teaGetter', '$scope', '$http', function(teaGe
     $scope.bagValue = $scope.cart.length
   }
 }])
-
-
-// for (var i = 0; i < arr.length; i++) {
-//   if (obj[arr[i]]) {
-//     obj[arr[i]] += 1;
-//   } else {
-//     obj[arr[i]] = 1;
-//   }
-// }
