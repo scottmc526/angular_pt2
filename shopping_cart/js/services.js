@@ -1,11 +1,11 @@
 app.service('teaGetter', ['$http', function($http){
   return {
     cart: [],
-    total: 0,
     getTea: function(){
       return $http.get('/tea_list.json')
     },
     addCart: function(input,qty) {
+      input.editBox = false;
       qty == undefined ? input.qty = 1 : input.qty = Number(qty)
       this.cart.push(input)
     },
@@ -14,6 +14,8 @@ app.service('teaGetter', ['$http', function($http){
     },
     editCart : function(input, qty) {
       qty == undefined ? this.cart[input]['qty'] = 1 : this.cart[input]['qty'] = qty;
+      this.cart[input]['editBox'] = !this.cart[input]['editBox']
+      console.log(this.cart[input]['editBox']);
     },
     cartTotal : function(){
       var total = 0;

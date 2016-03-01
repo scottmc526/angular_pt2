@@ -21,7 +21,7 @@
       <p><strong>Rating: </strong>{{item.rating}}</p>
     </td>
     <td>
-      <select ng-model='qty' ng-show='editBox'>
+      <select ng-model='qty' ng-show='item.editBox'>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -35,8 +35,8 @@
       {{item.price / 100 * item.qty | currency}}
     </td>
     <td>
-      <button ng-click='toggle()' class="btn btn-warning">Edit</button>
-      <button ng-click='edit($index, qty)' class='btn btn-success' ng-show='editBox'>Submit Changes</button>
+      <button ng-click='edit($index, qty)' class="btn btn-warning">Edit</button>
+      <button ng-click='edit($index, qty)' class='btn btn-success' ng-show='item.editBox'>Submit Changes</button>
       <button ng-click='delete($index, price)'class="btn btn-danger">Remove</button>
     </td>
   </tbody>
