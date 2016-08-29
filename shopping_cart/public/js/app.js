@@ -2,7 +2,7 @@ var app = angular.module('cart', ['ngRoute'])
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('/home', {
+    .when('/', {
       templateUrl: 'partials/index.html',
       controller: 'mainController'
     })
